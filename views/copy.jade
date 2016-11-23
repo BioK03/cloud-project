@@ -1,4 +1,7 @@
 extends layout
 
 block content
-    p= submitted_text
+    div.pastaContent
+        p= submitted_text
+        button#copyClipboard Copy to clipboard !
+    textarea#textareaCopy

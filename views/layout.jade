@@ -2,19 +2,14 @@ doctype html
 html
   head
     title= title
+    link(rel='stylesheet', href='/lib/purecss/pure-min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
-    link(rel='stylesheet', href='/lib/bootstrap-3.3.7-dist/css/bootstrap.min.css')
-    script(src='javascripts/jquery-3.1.1.min.js')
-    script(src='lib/bootstrap-3.3.7-dist/css/booststrap.min.css')
+    script(type="text/javascript", src="scripts/copyClipboard.js")
   body
-    div.navbar.navbar-fixed-top.copypasta-navbar
-      div.container.text-center
-          div.navbar-brand.center-block.copypasta-brand
-            p.copypasta-text CopyPastor
-              img.logo(src="images/pastor.svg")
+    div.container.text-center.titleContainer
+      p Copy
+      img.logo(src="images/pastalogo.png")
+      p Pasta
 
     div.content
       block content
-    div.navbar
-      div.container.text-center
-        p Thanks to Freepik@Flaticon for the pasta icon

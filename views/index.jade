@@ -1,20 +1,24 @@
 extends layout
 
 block content
-  div.container-fluid.copypasta-info
+  div.container-fluid.infoContainer
+    div#pastaPotContainer
+      img#imgPastaPot(src="images/pastaPot.png")
     div.row.text-center
       h1 Partagez vos écrits instantanément !
-    div.row.text-center
-      div.col-md-6.col-xs-12
-        div
-          span.glyphicon.glyphicon-paste.icon
-          p Collez votre texte, Validez
-      div.col-md-6.col-xs-12
-        div
-          span.glyphicon.glyphicon-duplicate
-          p Partagez le lien
-
-  form.container(action="/copy", method='POST')
-    textarea#text-input(name='text', placeholder="Votre texte ici", required="required")
-    input#submit.btn.btn-success(type='submit')
+    div.row.text-center.infoSubContainer
+      span
+        p 1
+      p Collez, 
+      span
+        p 2
+      p Validez, 
+      span
+        p 3
+      p Partagez !
+  div.pure-u-1-1
+    div.pure-u-1-8
+    form.pure-u-18-24.pure-form(action="/copy", method='POST')
+      textarea#text-input(name='text', placeholder="Votre texte ici", required="required")
+      input#submit.pure-button.pure-button-primary(type='submit')
 
