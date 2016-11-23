@@ -1,28 +1,76 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
-.content{
-  margin-top: 90px;
+
+
+.infoContainer {
+  border-top: 2px dashed #FFFFFF;
+  background-color: #AAAAAA;
+  color: #FFFFFF;
+  padding: 1em;
+  margin-bottom: 2em;
 }
 
-.copypasta-navbar{
-  background-color: #00B7FF;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-.copypasta-brand{
-  width: 100%;
+.infoSubContainer p, .infoSubContainer span {
+  display: inline-block;
+  font-size: 1.5em;
 }
 
-.copypasta-text{
-  color: white;
-  font-size: 60px;
+.infoSubContainer span {
+  background-color: #FFFFFF;
+  height: 1.5em;
+  border-radius: 0.75em;
+  width: 1.5em;
+  color: #AAAAAA;
+}
+
+.infoSubContainer p {
+  position: relative;
+  top: 0.25em;
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+}
+
+.infoSubContainer span p {
+  font-size: 1em;
+  position: relative;
+  bottom: 0;
+  margin: 0;
+}
+
+.titleContainer {
+  margin: 0;
   font-family: Verdana, Geneva, sans-serif;
+  background-color: #AAAAAA;
+  text-align: center;
+  padding: 1.5em;
 }
-.copypasta-info{
-    background-color: #35b863;
-    color: #ffffff;
-    font-size: x-large;
+
+.titleContainer p {
+  font-size: 3rem;
+  margin: 0;
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 0.5em;
+}
+
+.titleContainer p:first-child {
+  color: #FFFFFF;
+}
+
+.titleContainer p:last-child {
+  color: #FFB846;
+}
+
+.titleContainer img {
+  height: 5rem;
+  display: inline-block;
+  position: relative;
+  top: 1.5em;
+}
+
+input, textarea {
+  margin-top: 1em;
 }
 
 #text-input{
@@ -41,6 +89,58 @@ body {
     font-size: larger;
 }
 
-.logo{
-    height:50px;
+.text-center {
+  text-align: center;
+}
+
+.pure-button-primary, .pure-button-selected, a.pure-button-primary, a.pure-button-selected {
+  background-color: #AAAAAA;
+}
+
+#imgPastaPot {
+  width: 100%;
+  display: block;
+}
+
+#pastaPotContainer {
+  width: 20%;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 5%;
+}
+
+.pastaContent {
+  margin: 2em;
+  position: relative;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  border-top: 2px dashed #AAAAAA;
+  border-bottom: 2px dashed #AAAAAA;
+}
+
+#copyClipboard {
+  opacity: 0;
+  padding: 0.5em;
+  position: absolute;
+  top: 0.8em;
+  right: 0.8em;
+  color: #FFFFFF;
+  background-color: #AAAAAA;
+  border-radius: 3px;
+  border: 0;
+
+  -webkit-transition: 0.3s ease;
+        -moz-transition: 0.3s ease;
+         -ms-transition: 0.3s ease;
+          -o-transition: 0.3s ease;
+             transition: 0.3s ease;
+}
+
+.pastaContent:hover > #copyClipboard {
+  opacity: 1;
+}
+
+#textareaCopy {
+  opacity: 0;
 }
