@@ -1,0 +1,46 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+.content{
+  margin-top: 90px;
+}
+
+.copypasta-navbar{
+  background-color: #00B7FF;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.copypasta-brand{
+  width: 100%;
+}
+
+.copypasta-text{
+  color: white;
+  font-size: 60px;
+  font-family: Verdana, Geneva, sans-serif;
+}
+.copypasta-info{
+    background-color: #35b863;
+    color: #ffffff;
+    font-size: x-large;
+}
+
+#text-input{
+    margin-top:5px;
+    width: 100%;
+    min-width:100%;
+    max-width:100%;
+    min-height: 200px;
+    text-align: left;
+}
+
+#submit{
+    float: right;
+    position: relative;
+    padding:5px;
+    font-size: larger;
+}
+
+.logo{
+    height:50px;
+}
