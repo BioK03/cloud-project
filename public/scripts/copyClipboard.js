@@ -10,8 +10,7 @@ setTimeout(function(){
 
         try {
             var successful = document.execCommand('copy');
-            var msg = successful ? 'successful' : 'unsuccessful';
-            console.log(msg);
+            copyTextareaBtn.innerHTML = "Copied !";
         } catch (err) {
             console.log('Oops, unable to copy');
         }
