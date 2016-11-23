@@ -1,0 +1,10 @@
+version: '2'
+    services:
+      server:
+        image: vladmourier/cloud-project 
+        ports:
+         - "80:80"
+        depends_on:
+         - bd
+      bd:
+        image: redis
