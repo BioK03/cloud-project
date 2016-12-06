@@ -137,10 +137,35 @@ input, textarea {
              transition: 0.3s ease;
 }
 
-.pastaContent:hover > #copyClipboard {
-  opacity: 1;
+#copyClipboard2 {
+  background-color: #AAAAAA;
+  color: #FFFFFF;
+  opacity: 0.2;
+  border-radius: 0.2em;
+  padding: 0.3em;
+  cursor: pointer;
+
+  -webkit-transition: 0.3s ease;
+        -moz-transition: 0.3s ease;
+         -ms-transition: 0.3s ease;
+          -o-transition: 0.3s ease;
+             transition: 0.3s ease;
 }
 
-#textareaCopy {
+#linkCopy, #linkCopy:hover, #linkCopy:focus, #linkCopy:visited {
+  color: #AAAAAA;
+  padding-right: 3em;
+}
+
+.pastaContent:hover > #copyClipboard, .pastaContent:hover > p #copyClipboard2 {
+  opacity: 1 !important;
+}
+
+#textareaCopy, #textareaCopy2 {
   opacity: 0;
+}
+
+.img1em {
+  height: 1em;
+  display: inline-block;
 }

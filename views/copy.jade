@@ -2,7 +2,13 @@ extends layout
 
 block content
     div.pastaContent
-        p= submitted_text
+        p#pastaText= submitted_text
         button#copyClipboard Copy to clipboard !
+        br
+        p= "Link to this "
+            img.img1em(src="images/pasta.png")
+            span=" CopyPasta : "
+            a#linkCopy(href=link_href)=link_href
+            span#copyClipboard2= "Copy to Clipboard ?"
     textarea#textareaCopy
-    a(href=link_href)=link_href
+    textarea#textareaCopy2
