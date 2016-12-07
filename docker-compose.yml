@@ -2,9 +2,7 @@ version: '2'
 services:
   server:
     image: vladmourier/cloud-project
-    ports:
-      - "8100:80"
-    depends_on:
+    links:
        - bd
     labels:
      - "traefik.port=80"
