@@ -19,9 +19,10 @@ setTimeout(function(){
 
         var copyTextareaBtn2 = document.querySelector("#copyClipboard2");
         var textArea2 = document.querySelector("#textareaCopy2");
+        var linkCopy = document.querySelector("#linkCopy");
 
         copyTextareaBtn2.addEventListener('click', function(event) {
-            var newURL = window.location.protocol + "//" + window.location.host + window.location.pathname;
+            var newURL = window.location.protocol + "//" + window.location.host + "/" + linkCopy.innerHTML;
             textArea2.value = newURL;
             textArea2.select();
 
