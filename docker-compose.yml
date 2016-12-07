@@ -15,7 +15,7 @@ services:
       - "traefik.enable=false"
   traefik:
     image: traefik
-    command: --web --docker --acme --acme.entrypoint=https --acme.domains=ec2-52-50-237-127.eu-west-1.compute.amazonaws.com --acme.email=cyril.couturier@gmx.fr --entryPoints='Name:http Address::80 Redirect.EntryPoint:https' --entryPoints='Name:https Address::443 TLS' --acme.storagefile=acme.json --docker.domain=localhost --logLevel=DEBUG
+    command: --web --docker --acme --acme.entrypoint=https --acme.domains=ec2-52-50-237-127.eu-west-1.compute.amazonaws.com --acme.email=cyril.couturier@gmx.fr --entryPoints='Name:http Address::80 Redirect.EntryPoint:https' --entryPoints='Name:https Address::443 TLS' --acme.storage=acme.json --docker.domain=localhost --logLevel=DEBUG
     ports:
       - "80:80"
       - "443:443"
