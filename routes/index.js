@@ -38,7 +38,7 @@ module.exports = router;
 var redis = require('redis');
 
 DB_PORT = 6379;
-DB_HOST = '192.168.99.100';// 'bd' en prod
+DB_HOST = 'bd';//'192.168.99.100';// 'bd' en prod
 temps_exp = 3000;// temps d'expiration, en sec
 
 function insert(key, corps, callback) {
