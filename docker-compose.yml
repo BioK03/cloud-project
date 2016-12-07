@@ -6,8 +6,15 @@ services:
       - "80:80"
     depends_on:
        - bd
+    labels:
+     - "traefik.port=80"
+     - "traefik.backend=back"
+     - "traefik.frontend.rule=Host:ec2-52-50-237-127.eu-west-1.compute.amazonaws.com"
+     - "traefik.frontend.entryPoints=http"
   bd:
     image: redis
+    labels:
+      - "traefik.enable=false"
   traefik:
     image: traefik
     command: --web --docker --docker.domain=localhost --logLevel=DEBUG
@@ -18,3 +25,5 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - /dev/null:/traefik.toml
+    labels:
+      - "traefik.enable=false"
