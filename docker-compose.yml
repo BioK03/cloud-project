@@ -8,3 +8,13 @@ services:
        - bd
   bd:
     image: redis
+  traefik:
+    image: traefik
+    command: --web --docker --docker.domain=localhost --logLevel=DEBUG
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8080:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /dev/null:/traefik.toml
