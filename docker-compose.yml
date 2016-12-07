@@ -3,7 +3,7 @@ services:
   server:
     image: vladmourier/cloud-project
     ports:
-      - "80:80"
+      - "8100:80"
     depends_on:
        - bd
     labels:
