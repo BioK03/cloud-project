@@ -8,14 +8,14 @@ services:
      - "traefik.port=80"
      - "traefik.backend=back"
      - "traefik.frontend.rule=Host:ec2-52-50-237-127.eu-west-1.compute.amazonaws.com"
-     - "traefik.frontend.entryPoints=http,https"
+     - "traefik.frontend.entryPoints=http"
   bd:
     image: redis
     labels:
       - "traefik.enable=false"
   traefik:
     image: traefik
-    command: --web --docker --acme --acme.entrypoint=https --acme.domains=ec2-52-50-237-127.eu-west-1.compute.amazonaws.com --acme.email=cyril.couturier@gmx.fr --entryPoints='Name:http Address::80 Redirect.EntryPoint:https' --entryPoints='Name:https Address::443 TLS' --acme.storage=acme.json --docker.domain=localhost --logLevel=DEBUG
+    command: --web --docker --docker.domain=localhost --logLevel=DEBUG
     ports:
       - "80:80"
       - "443:443"
@@ -23,6 +23,5 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - /dev/null:/traefik.toml
-      - /opt/acme/acme.json:/acme.json
     labels:
-      - "traefik.enable=false"
+- "traefik.enable=false"

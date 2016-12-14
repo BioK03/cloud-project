@@ -7,7 +7,7 @@ var content_id;
 
 /* GET home page. */
 router.get('/:id?', function (req, res, next) {
-    if(req.params.id){
+    if (req.params.id) {
         content_id = req.params.id;
         get(content_id, handleResult);
         res.render('copy', {submitted_text: content_text, link_href: content_id});
@@ -54,8 +54,7 @@ function insert(key, corps, callback) {
                 callback(replyed);
             });
         }
-});
-
+    });
 }
 
 function get(key, callback) {
@@ -67,5 +66,5 @@ var handleResult = function (error, buffer) {
     console.log("Error : " + error);
     console.log("Buffer : " + buffer);
 
-    if(buffer) content_text = buffer;
+    if (buffer) content_text = buffer;
 };
