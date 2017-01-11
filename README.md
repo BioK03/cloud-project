@@ -17,6 +17,7 @@ NodeJS server w/ Express Framework
 Redis
 
 ## Project
+<img src="public/images/pasta.png" width="150" alt="CopyPasta">Copypasta
 
 We are developing a twin of [PasteBin](http://pastebin.com/), website to share freetext, code, ... with others.
 A unique key is generated in the URL, the bin is available only to users that have the key.
